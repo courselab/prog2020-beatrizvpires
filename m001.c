@@ -24,17 +24,22 @@
 
 int greatest (int a, int b, int c)
 {
+  int great;
+
 if (a>b && a>c)
 {
-  return a;
+  great = a;
+  return great ;
 }
   if (b>c && b>a)
   {
-    return b;
+    great = b;
+    return great;
   }
   if (c>a && c>b)
   {
-    return c;
+    great = c;
+    return great;
   }
 }
 
