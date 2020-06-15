@@ -24,23 +24,16 @@
 
 int greatest (int a, int b, int c)
 {
-  int great;
-
-if (a>b && a>c)
+int max = a;
+if (b >=max)
 {
-  great = a;
-  return great ;
+  max = b;
 }
-  if (b>c && b>a)
-  {
-    great = b;
-    return great;
-  }
-  if (c>a && c>b)
-  {
-    great = c;
-    return great;
-  }
+if (c>=max)
+{
+  max = c;
+}
+return max;
 }
 
 /* Do not edit this function. */
