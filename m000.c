@@ -21,11 +21,31 @@
 
 #define MAX 255
 
+{
+  int n;
+  if ( (c >= 'a') && (c<= 'z')) 
+  n = (c - 'a') % 9 + 1;
+  else
+  if ( (c >= 'A') && (c <= 'Z'))
+  n = ( c - 'a' + 32) % 9 + 1;
+  else
+  n=0;
+  return n;
+  }
+
 /* Write the number 'n' in Roman numerals.*/
+
 
 int pitagorean (char *s)
 {
-  return 0;
+  int i=0, count=0;
+  while (s[i] != 0)
+  {
+    count = count + np (s[i]);
+    i++;
+  }
+
+  return count;
 }
 
 /* Do not edit function main. */
