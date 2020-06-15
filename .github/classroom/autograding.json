@@ -1,0 +1,134 @@
+{
+  "tests": [
+    {
+      "name": "Test setup",
+      "setup": "wget -O - https://raw.githubusercontent.com/exercise-template/cprog02/master/Makefile > makefile",
+      "run": "touch makefile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "Test m001",
+      "setup": "make -f makefile mt001",
+      "run": "./mt001 30 20 10 && ./mt001 0 2 2 && ./mt001 -1 -2 -3",
+      "input": "",
+      "output": "30\r\n2\r\n-1\r\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m002",
+      "setup": "make -f makefile mt002",
+      "run": "./mt002 8 4 3",
+      "input": "",
+      "output": "3 4 8",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m003",
+      "setup": "make -f makefile mt003",
+      "run": "for i in 7 9 11 2 1 0; do ./mt003 $i; done",
+      "input": "",
+      "output": "1\r\n0\r\n1\r\n1\r\n0\r\n0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m004",
+      "setup": "make -f makefile mt004",
+      "run": "./mt004 0 && ./mt004 111 && ./mt004 101010",
+      "input": "",
+      "output": "0\r\n7\r\n42",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m005",
+      "setup": "make -f makefile mt005",
+      "run": "echo 1 2 3 2 1 3 3 2 0 | ./mt005 && echo  1 2 3 2 1 3 3 2 6 | ./mt005",
+      "input": "",
+      "output": "15\r\n-3",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m006",
+      "setup": "make -f makefile mt006",
+      "run": "echo 1 2 3 4 5 7 | ./mt006 && echo 2 4 6 1 3 5 | ./mt006 ",
+      "input": "",
+      "output": "-1 5 -3\r\n2 -4 2",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m007",
+      "setup": "make -f makefile mt007",
+      "run": "echo foo bar | ./mt007 && echo I have a dog. | ./mt007",
+      "input": "",
+      "output": "6\r\n9",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m008",
+      "setup": "make -f makefile mt008",
+      "run": "echo Fulano de tal | ./mt008",
+      "input": "",
+      "output": "TAL, Fulano de ",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m009",
+      "setup": "make -f makefile mt009",
+      "run": "./mt009 4 3 2 1 && ./mt009 10 -1 0 2 2",
+      "input": "",
+      "output": "1 2 3 4 \r\n-1 0 2 2 10 ",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m010",
+      "setup": "make -f makefile mt010",
+      "run": "./mt010 8 6 && ./mt010 11 11",
+      "input": "",
+      "output": "Monday\r\nWednesday",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m011",
+      "setup": "make -f makefile mt011",
+      "run": "./mt011 i011.txt",
+      "input": "",
+      "output": "98",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test m000",
+      "setup": "make -f makefile mt000",
+      "run": "./mt000",
+      "input": "Foo Bar",
+      "output": "30",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 0
+    }
+  ]
+}
