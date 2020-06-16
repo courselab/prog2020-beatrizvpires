@@ -27,7 +27,16 @@
 
 int determinant (int m[3][3])
 {
-  return 0;
+  int result = 0, aux1 = 0, aux2 = 0;
+  aux1 +=(m[0][0]*m[1][1]*m[2][2]);
+  aux1 +=(m[0][1]*m[1][2]*m[2][0]);
+  aux1 +=(m[0][2]*m[1][0]*m[2][1]);
+  aux2 +=(m[0][2]*m[1][1]*m[2][0]);
+  aux2 +=(m[0][0]*m[1][2]*m[2][1]);
+  aux2 +=(m[0][1]*m[1][0]*m[2][2]);
+  result =aux1-aux2;
+
+  return result;
 }
 
 
