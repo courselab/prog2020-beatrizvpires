@@ -26,11 +26,30 @@
 
 /* Count the number of letters in string s.*/
 
-int lettercount (char *s)
+int value (char c)
 {
-  return 0;
+  int n = 0;
+  if (c>='a' && c<='z')
+  {
+    n+=1;
+  }
+  if (c>='A' && c<='Z')
+  {
+    n+=1;
+  } 
+  return n ;
 }
 
+int lettercount (char *s)
+{
+  int count =0, i = 0;
+  while(s[i] != 0)
+  {
+    count +=value(s[i]);
+    i++;
+  }
+  return count ;
+}
 
 
 /* Do not edit this function. */
