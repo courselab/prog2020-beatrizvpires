@@ -15,7 +15,7 @@
 
    Directions:
 
-      Please, edit function lasname();
+      Please, edit function lastname();
       do no not change function main().
 
 */
@@ -30,6 +30,87 @@
 
 void lastname (char *s)
 {
+	int i, j;
+	int numberofspaces, firstletter, firstspace, count, total, state;
+	char a[MAX];
+	
+	numberofspaces = firstletter = j = count = total = 0;
+	
+	for (i = 0; s[i+1] != 0; ++i)
+	++total;
+	
+	if (s[total-1] == ' ')
+	{
+		s[total] = 0;
+		state = 1;
+	}
+	
+	else
+	state = 0;
+	
+	for (i = 0; s[i+1] != 0; ++i) 
+	{
+		if (s[i] == ' ')
+		++ numberofspaces;
+	}
+	
+	for (i = 0; j < numberofspaces; ++i) 
+	{
+		if (s[i] == ' ')
+		++j;
+	}
+	
+	firstletter = i;
+	j = 0;
+	
+	for (i = 0; j < 1; ++i) 
+	{
+		if (s[i] == ' ')
+		++j;
+	}
+	
+	firstspace = i;
+	
+	for (i = 0; s[i+1] != 0; ++i) 
+	{
+		a[i] = s[i+firstletter];
+	}
+	
+	for (i = 0; a[i+1] != 0; ++i)
+	++count;
+	
+	a[ count ] = ','; 
+	a[count+1] = ' '; 
+	
+	
+	for (i = 0; i+1 < firstletter; ++i)  
+	{
+		a[count+2+i] = s[i];
+	}
+	
+	a[count+2+i] = 0;
+	
+	for (i = 0; i < count; ++i)  
+	{
+		if (a[i] >= 97)
+		a[i] = a[i] - 32;
+		
+		else
+		;
+	}
+	
+	for (i = 0; a[i] != 0; ++i) 
+	s[i] = a[i];
+	
+	if (state == 1)
+	{
+		s[i] = ' ';
+		s[i +1] = 0;
+	}
+	
+	else
+	;
+	
 }
 
 
